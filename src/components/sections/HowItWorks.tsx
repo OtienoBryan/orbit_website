@@ -91,8 +91,8 @@ export const HowItWorks = () => {
 
           {/* Image */}
           <Reveal delay={200} className="lg:w-1/2">
-            <div className="rounded-xl overflow-hidden shadow-lg w-full" style={{ maxHeight: 320 }}>
-              <img src="/booth.png" alt="Orbit booth" className="w-full h-full object-cover" />
+            <div className="rounded-xl overflow-hidden shadow-lg w-full h-full">
+              <img src="/booth.png" alt="Orbit booth" className="w-full h-full object-contain" />
             </div>
           </Reveal>
         </div>
