@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Orbit POS Design System — Dark Edition
+ * Palette: oklch deep forest + bright green accent
+ */
+
+@layer base {
+  :root {
+    /* Brand — dark base */
+    --bg:          #07120c;
+    --bg-2:        #0c1a12;
+    --ink:         #0a140e;
+    --paper:       #f4f6f2;
+    --paper-2:     #e9ede4;
+
+    /* Lines */
+    --line:        rgba(255,255,255,0.08);
+    --line-strong: rgba(255,255,255,0.16);
+    --line-dark:   rgba(10,20,14,0.10);
+
+    /* Muted text */
+    --muted:       rgba(244,246,242,0.62);
+    --muted-dark:  rgba(10,20,14,0.58);
+
+    /* Green accent — oklch */
+    --green:       oklch(0.68 0.20 145);
+    --green-2:     oklch(0.55 0.19 148);
+    --green-deep:  oklch(0.32 0.12 150);
+    --green-soft:  oklch(0.92 0.06 145);
+    --accent:      oklch(0.86 0.16 130);
+
+    /* Tailwind HSL compat (must be pure HSL channel values for Tailwind to apply opacity) */
+    --forest:            134 60% 15%;
+    --forest-deep:       134 65% 11%;
+    --tint:              138 50% 94%;
+    --background:        134 65% 3%;
+    --foreground:        120 10% 96%;
+    --card:              134 40% 6%;
+    --card-foreground:   120 10% 96%;
+    --popover:           134 40% 6%;
+    --popover-foreground:120 10% 96%;
+    --primary:           142 71% 55%;
+    --primary-foreground:134 65% 6%;
+    --secondary:         134 20% 12%;
+    --secondary-foreground:120 10% 95%;
+    --muted:             134 20% 10%;
+    --muted-foreground:  120 5% 62%;
+    /* accent = bright green — used by text-accent in OrbitLogo */
+    --accent:            142 71% 55%;
+    --accent-foreground: 134 65% 6%;
+    --accent-muted:      138 50% 94%;
+    --accent-muted-foreground: 134 60% 15%;
+    --destructive:       0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border:            134 20% 12%;
+    --input:             134 20% 12%;
+    --ring:              142 71% 55%;
+    --radius:            0.75rem;
+
+    --shadow: 0 30px 80px -20px rgba(0,0,0,0.45);
+  }
+
+  .dark {
+    --background:   0 0% 4%;
+    --foreground:   120 10% 95%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    background: var(--bg);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: var(--paper);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    @apply antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+
+  ::selection { background: var(--green); color: #06180e; }
+}
+
+@layer components {
+  /* ---- Layout ---- */
+  .container-orbit {
+    @apply mx-auto w-full max-w-7xl px-6 lg:px-8;
+  }
+
+  /* ---- Eyebrow ---- */
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--green);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background: var(--green);
+    flex-shrink: 0;
+  }
+
+  /* ---- Reveal animation ---- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ---- Pill buttons ---- */
+  .btn-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s;
+    border: 1px solid transparent;
+  }
+  .btn-pill-primary {
+    background: var(--green);
+    color: #06180e;
+    box-shadow: 0 14px 30px -10px oklch(0.62 0.18 145 / 0.7);
+  }
+  .btn-pill-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 36px -10px oklch(0.62 0.18 145 / 0.85);
+  }
+  .btn-pill-ghost {
+    background: rgba(255,255,255,0.04);
+    color: #fff;
+    border-color: var(--line-strong);
+  }
+  .btn-pill-ghost:hover { background: rgba(255,255,255,0.08); }
+
+  /* ---- Glassmorphism card ---- */
+  .glass-card {
+    background: rgba(12,26,18,0.75);
+    border: 1px solid var(--line-strong);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  /* ---- Feature card ---- */
+  .feature-card {
+    border-radius: 20px;
+    padding: 28px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--line);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .feature-card::after {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, oklch(0.68 0.20 145 / 0.7), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .feature-card:hover { transform: translateY(-4px); border-color: oklch(0.68 0.20 145 / 0.4); }
+  .feature-card:hover::after { opacity: 1; }
+}
+
+/* ---- Grid overlay utility ---- */
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(80% 60% at 50% 40%, #000 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(80% 60% at 50% 40%, #000 30%, transparent 80%);
+  pointer-events: none;
+}
