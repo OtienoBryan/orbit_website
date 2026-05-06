@@ -84,6 +84,19 @@ export default function CashInTransit() {
       <Navbar />
       <main className="flex-1 pt-14 lg:pt-16">
 
+        {/* Infographic — From Complexity to One Connection */}
+        <section style={{ background: "var(--bg)" }}>
+          <div className="w-full px-3 sm:px-4 lg:px-8 py-6 lg:py-10 max-w-6xl mx-auto">
+            <div className="rounded-xl lg:rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="/control room.png"
+                alt="From Complexity to One Connection — Orbit 24/7"
+                className="w-full h-auto block"
+              />
+            </div>
+          </div>
+        </section>
+
         {/* PesaLink Rail — key differentiator */}
         <section className="py-10 lg:py-16" style={{ background: "var(--bg-2)" }}>
           <div className="container-orbit">
@@ -162,7 +175,7 @@ export default function CashInTransit() {
                   Cash banking at every location, day or night.
                 </h2>
                 <p style={{ color: "var(--muted)", fontSize: "clamp(12px,1.1vw,15px)", lineHeight: 1.6 }}>
-                  Orbit CDM kiosks operate 24/7 — at petrol stations, malls, transit hubs, and busy streets. Each kiosk is directly on PesaLink rails, clearing instantly to any bank in Kenya.
+                  Orbit CDM kiosks operate 24/7 — at petrol stations, malls, transit hubs, dedicated corprate clients and busy streets. Each kiosk is directly on PesaLink rails, clearing instantly to any bank in Kenya.
                 </p>
                 <ul className="mt-4 grid grid-cols-2 sm:grid-cols-1 gap-2">
                   {["Cash Deposit", "Cash Withdrawal", "Funds Transfer", "Bill Payments", "Airtime Top-up"].map((item) => (
