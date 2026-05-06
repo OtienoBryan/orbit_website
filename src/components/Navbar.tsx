@@ -11,6 +11,7 @@ const NAV: NavItem[] = [
   { label: "Network", href: "/#agents" },
   { label: "PesaLink", href: "/#ecosystem" },
   { label: "How it works", href: "/how-it-works" },
+  { label: "Hotels & Restaurants", href: "/hotels-restaurants" },
   { label: "CIT", href: "/cash-in-transit" },
   { label: "Contact", href: "/contact" },
 ];
