@@ -65,25 +65,25 @@ export default function HotelsRestaurants() {
 
         {/* Hero */}
         <section
-          className="py-10 lg:py-20 relative overflow-hidden"
+          className="py-8 lg:py-16 relative overflow-hidden"
           style={{
             background: "radial-gradient(120% 80% at 80% 0%, oklch(0.40 0.16 148 / 0.45), transparent 60%), radial-gradient(80% 60% at 0% 100%, oklch(0.32 0.12 150 / 0.55), transparent 65%), var(--bg)",
           }}
         >
-          <div className="container-orbit grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="container-orbit flex flex-col gap-6 lg:grid lg:grid-cols-2 lg:gap-12 items-center">
             <Reveal>
               <span className="eyebrow" style={{ color: "var(--green)" }}>Hotels & Restaurants</span>
               <h1
-                className="font-extrabold text-white mt-3 mb-4"
-                style={{ fontSize: "clamp(26px,4.5vw,62px)", lineHeight: 1.05, letterSpacing: "-0.025em" }}
+                className="font-extrabold text-white mt-2 mb-3"
+                style={{ fontSize: "clamp(24px,4.5vw,60px)", lineHeight: 1.05, letterSpacing: "-0.025em" }}
               >
                 Payments as seamless as your{" "}
                 <span style={{ color: "var(--green)" }}>hospitality.</span>
               </h1>
-              <p style={{ color: "var(--muted)", fontSize: "clamp(13px,1.2vw,17px)", lineHeight: 1.6, maxWidth: "52ch" }}>
+              <p style={{ color: "var(--muted)", fontSize: "clamp(13px,1.2vw,16px)", lineHeight: 1.6 }}>
                 Orbit 24/7 lets your guests pay directly from any bank in Kenya — no card, no hassle. Instant settlement, automated reconciliation, and staff-level tracking built in.
               </p>
-              <div className="mt-6 flex flex-wrap gap-3">
+              <div className="mt-5 flex flex-wrap gap-3">
                 <Link to="/contact" className="btn-pill btn-pill-primary">
                   Get Started <ArrowRight size={15} />
                 </Link>
@@ -93,26 +93,26 @@ export default function HotelsRestaurants() {
               </div>
 
               {/* Quick stats */}
-              <div className="mt-8 flex flex-wrap gap-6 pt-6" style={{ borderTop: "1px solid var(--line)" }}>
+              <div className="mt-5 flex flex-wrap gap-5 pt-5" style={{ borderTop: "1px solid var(--line)" }}>
                 {[
-                  { v: "<12s", l: "Settlement time" },
-                  { v: "30+",  l: "Banks connected" },
+                  { v: "<12s",   l: "Settlement time" },
+                  { v: "30+",    l: "Banks connected" },
                   { v: "99.98%", l: "Uptime" },
                 ].map(({ v, l }) => (
                   <div key={l} className="flex flex-col gap-0.5">
-                    <span className="text-xl lg:text-2xl font-bold text-white" style={{ fontFamily: "'JetBrains Mono',monospace" }}>{v}</span>
-                    <span className="text-[11px] lg:text-[13px]" style={{ color: "var(--muted)" }}>{l}</span>
+                    <span className="text-lg lg:text-2xl font-bold text-white" style={{ fontFamily: "'JetBrains Mono',monospace" }}>{v}</span>
+                    <span className="text-[11px]" style={{ color: "var(--muted)" }}>{l}</span>
                   </div>
                 ))}
               </div>
             </Reveal>
 
             <Reveal delay={120}>
-              <div className="grid grid-cols-2 gap-3">
-                <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <div className="grid grid-cols-2 gap-2 lg:gap-3">
+                <div className="rounded-xl lg:rounded-2xl overflow-hidden shadow-xl">
                   <img src="/hotel3.png" alt="Orbit 24/7 Restaurant Payment" className="w-full h-full object-cover" />
                 </div>
-                <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <div className="rounded-xl lg:rounded-2xl overflow-hidden shadow-xl">
                   <img src="/hotel agent.png" alt="Orbit 24/7 Hotel Payment" className="w-full h-full object-cover" />
                 </div>
               </div>
@@ -186,8 +186,8 @@ export default function HotelsRestaurants() {
         </section>
 
         {/* Staff accounts highlight */}
-        <section className="py-10 lg:py-16" style={{ background: "var(--bg-2)" }}>
-          <div className="container-orbit grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <section className="py-8 lg:py-16" style={{ background: "var(--bg-2)" }}>
+          <div className="container-orbit flex flex-col gap-6 lg:grid lg:grid-cols-2 lg:gap-12 items-center">
             <Reveal>
               <span className="eyebrow">Staff Accounts</span>
               <h2
@@ -199,7 +199,7 @@ export default function HotelsRestaurants() {
               <p style={{ color: "var(--muted)", fontSize: "clamp(13px,1.1vw,16px)", lineHeight: 1.6 }}>
                 Assign unique Orbit accounts to each waiter, cashier, or front-desk agent. Every transaction is tagged to the individual — giving management instant visibility into performance, discrepancies, and daily totals.
               </p>
-              <ul className="mt-6 space-y-3">
+              <ul className="mt-5 space-y-2.5">
                 {[
                   "Individual login per staff member",
                   "Per-employee transaction reports",
@@ -207,8 +207,8 @@ export default function HotelsRestaurants() {
                   "Dispute resolution with full audit trail",
                   "Manager dashboard with real-time view",
                 ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-sm" style={{ color: "rgba(244,246,242,0.85)" }}>
-                    <CheckCircle2 size={16} style={{ color: "var(--green)", flexShrink: 0 }} />
+                  <li key={item} className="flex items-center gap-3 text-xs lg:text-sm" style={{ color: "rgba(244,246,242,0.85)" }}>
+                    <CheckCircle2 size={14} style={{ color: "var(--green)", flexShrink: 0 }} />
                     {item}
                   </li>
                 ))}
