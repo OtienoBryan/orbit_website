@@ -123,7 +123,7 @@ export const Liquidity = () => {
 
               {/* Hub center */}
               <div
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl flex flex-col items-center justify-center gap-1 text-center z-10"
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl flex items-center justify-center z-10 p-3"
                 style={{
                   width: 120, height: 120,
                   background: "oklch(0.32 0.14 148 / 0.95)",
@@ -132,8 +132,7 @@ export const Liquidity = () => {
                   boxShadow: "0 0 40px oklch(0.68 0.20 145 / 0.30)",
                 }}
               >
-                <div className="text-[9px] uppercase tracking-widest text-green-400 opacity-80" style={{ fontFamily: "'JetBrains Mono',monospace" }}>RAIL</div>
-                <div className="text-base font-bold text-white mt-0.5">PesaLink</div>
+                <img src="/pesalink.png" alt="PesaLink" className="w-full h-auto object-contain" />
               </div>
 
               {/* Node badges */}

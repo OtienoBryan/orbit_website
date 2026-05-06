@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import InterbankCdm from "./pages/InterbankCdm.tsx";
 import CashInTransit from "./pages/CashInTransit.tsx";
 import Contact from "./pages/Contact.tsx";
+import HowItWorksPage from "./pages/HowItWorksPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/interbank-cdm" element={<InterbankCdm />} />
           <Route path="/cash-in-transit" element={<CashInTransit />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/how-it-works" element={<HowItWorksPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

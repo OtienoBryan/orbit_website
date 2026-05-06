@@ -10,8 +10,8 @@ const NAV: NavItem[] = [
   { label: "Locations", href: "/#locations" },
   { label: "Network", href: "/#agents" },
   { label: "PesaLink", href: "/#ecosystem" },
-  { label: "How it works", href: "/#how-it-works" },
-  { label: "Security", href: "/#security" },
+  { label: "How it works", href: "/how-it-works" },
+  { label: "CIT", href: "/cash-in-transit" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -68,13 +68,20 @@ export const Navbar = () => {
         )}
       </nav>
 
-      <div className="hidden md:flex items-center gap-3">
+      <div className="hidden md:flex items-center gap-1">
         <a
           href="tel:0788585932"
-          className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-[rgba(255,255,255,0.06)]"
+          className="inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-sm font-semibold text-white transition-all hover:bg-[rgba(255,255,255,0.06)]"
         >
-          <Phone size={15} style={{ color: "var(--green)" }} />
+          <Phone size={14} style={{ color: "var(--green)" }} />
           0788 585 932
+        </a>
+        <span style={{ color: "rgba(255,255,255,0.25)" }}>·</span>
+        <a
+          href="tel:0707324596"
+          className="inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-sm font-semibold text-white transition-all hover:bg-[rgba(255,255,255,0.06)]"
+        >
+          0707 324 596
         </a>
       </div>
 
@@ -114,10 +121,17 @@ export const Navbar = () => {
             )}
             <a
               href="tel:0788585932"
-              className="mt-3 inline-flex items-center gap-2 py-2.5 text-sm font-semibold text-white"
+              className="mt-3 inline-flex items-center gap-2 py-2 text-sm font-semibold text-white"
             >
               <Phone size={15} style={{ color: "var(--green)" }} />
               0788 585 932
+            </a>
+            <a
+              href="tel:0707324596"
+              className="inline-flex items-center gap-2 py-2 text-sm font-semibold text-white"
+            >
+              <Phone size={15} style={{ color: "var(--green)" }} />
+              0707 324 596
             </a>
           </div>
         </div>

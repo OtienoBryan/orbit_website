@@ -51,7 +51,7 @@ export const Security = () => {
               letterSpacing: "-0.025em",
             }}
           >
-            Built for PesaLink.<br />
+            Built on PesaLink Rails.<br />
             <span style={{ color: "var(--green)" }}>Secured for CBK.</span>
           </h2>
 

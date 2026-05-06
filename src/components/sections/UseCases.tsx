@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Utensils, Hospital, Fuel, ShoppingCart, type LucideIcon } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
-import { PhoneMockup } from "@/components/devices/PhoneMockup";
-import { CdmMockup } from "@/components/devices/CdmMockup";
 
 type TabKey = "restaurant" | "healthcare" | "petrol" | "retail";
 interface TabConfig {
@@ -129,12 +127,10 @@ export const UseCases = () => {
           </div>
 
           <div
-            className="hidden lg:flex justify-center p-6 rounded-2xl"
+            className="hidden lg:flex justify-center items-center p-6 rounded-2xl"
             style={{ background: "rgba(255,255,255,0.03)", border: "1px solid var(--line)" }}
           >
-            {tab.visual === "phone-agent"   && <PhoneMockup mode="agent" />}
-            {tab.visual === "phone-merchant" && <PhoneMockup mode="merchant" />}
-            {tab.visual === "cdm"           && <CdmMockup variant="deposit" />}
+            <img src="/pos1.png" alt="Orbit POS terminal" className="w-full h-auto object-contain" style={{ maxHeight: 340 }} />
           </div>
         </div>
       </div>

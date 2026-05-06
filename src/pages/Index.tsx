@@ -7,6 +7,7 @@ import { Features } from "@/components/sections/Features";
 import { Liquidity } from "@/components/sections/Liquidity";
 import { UseCases } from "@/components/sections/UseCases";
 import { Mtaani } from "@/components/sections/Mtaani";
+import { Merchants } from "@/components/sections/Merchants";
 import { Hardware } from "@/components/sections/Hardware";
 import { Security } from "@/components/sections/Security";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -25,6 +26,7 @@ const Index = () => {
         <Liquidity />
         <UseCases />
         <Mtaani />
+        <Merchants />
         <Hardware />
         <Security />
         <FinalCta />

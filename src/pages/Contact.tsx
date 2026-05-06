@@ -91,15 +91,15 @@ export default function Contact() {
     <PageShell>
       {/* Hero */}
       <section className="bg-forest text-white">
-        <div className="container-orbit py-16 lg:py-20">
+        <div className="container-orbit py-8 lg:py-16">
           <Reveal className="max-w-2xl">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
               Contact
             </span>
-            <h1 className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight">
+            <h1 className="mt-3 font-bold tracking-tight" style={{ fontSize: "clamp(24px,4vw,48px)" }}>
               Let's talk about your deployment.
             </h1>
-            <p className="mt-4 text-lg text-white/75 leading-relaxed">
+            <p className="mt-3 text-white/75 leading-relaxed" style={{ fontSize: "clamp(13px,1.2vw,17px)" }}>
               Tell us a bit about your network and what you'd like to build.
               We respond within one business day.
             </p>
@@ -108,36 +108,38 @@ export default function Contact() {
       </section>
 
       {/* Form + info */}
-      <section className="bg-white py-20 lg:py-24">
-        <div className="container-orbit grid lg:grid-cols-5 gap-12">
+      <section className="bg-white py-8 lg:py-16">
+        <div className="container-orbit grid lg:grid-cols-5 gap-6 lg:gap-12">
           {/* Info */}
-          <Reveal className="lg:col-span-2 space-y-6">
+          <Reveal className="lg:col-span-2">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-3">
             <div className="rounded-xl bg-tint p-6 border border-border">
               <Mail size={22} className="text-forest" />
               <h3 className="mt-3 text-base font-semibold text-forest">Email</h3>
               <a
-                href="mailto:hello@orbitpos.co.ke"
+                href="mailto:info@orbit247.co.ke"
                 className="mt-1 block text-sm text-muted-foreground hover:text-forest"
               >
-                hello@orbitpos.co.ke
+                info@orbit247.co.ke
               </a>
             </div>
             <div className="rounded-xl bg-tint p-6 border border-border">
               <Phone size={22} className="text-forest" />
               <h3 className="mt-3 text-base font-semibold text-forest">Phone</h3>
-              <a
-                href="tel:+254700000000"
-                className="mt-1 block text-sm text-muted-foreground hover:text-forest"
-              >
-                +254 700 000 000
+              <a href="tel:0788585832" className="mt-1 block text-sm text-muted-foreground hover:text-forest">
+                0788 585 832
+              </a>
+              <a href="tel:0707324596" className="mt-1 block text-sm text-muted-foreground hover:text-forest">
+                0707 324 596
               </a>
             </div>
             <div className="rounded-xl bg-tint p-6 border border-border">
               <MapPin size={22} className="text-forest" />
               <h3 className="mt-3 text-base font-semibold text-forest">Office</h3>
               <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
-                Westlands, Nairobi<br />Kenya
+                Ndemi Lane, off Ngong Road<br />Nairobi, Kenya
               </p>
+            </div>
             </div>
           </Reveal>
 

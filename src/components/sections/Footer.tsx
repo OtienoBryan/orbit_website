@@ -34,28 +34,25 @@ const COLS: { title: string; links: LinkItem[] }[] = [
 export const Footer = () => {
   return (
     <footer style={{ borderTop: "1px solid var(--line)", background: "var(--bg)" }}>
-      <div className="container-orbit py-8 lg:py-14">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
-          {/* Brand col */}
-          <div className="col-span-2 lg:col-span-1">
-            <OrbitLogo tone="light" />
-            <p
-              className="mt-3 leading-relaxed"
-              style={{ color: "var(--muted)", fontSize: 13, maxWidth: "32ch" }}
-            >
-              Kenya's always-on cash network — CDMs and agent POS terminals connected to every major bank and SACCO.
-            </p>
-          </div>
+      <div className="container-orbit py-8 lg:py-12">
+        {/* Brand row — full width on mobile */}
+        <div className="mb-6 pb-6" style={{ borderBottom: "1px solid var(--line)" }}>
+          <OrbitLogo tone="light" />
+          <p
+            className="mt-2 leading-relaxed"
+            style={{ color: "var(--muted)", fontSize: 12, maxWidth: "38ch" }}
+          >
+            Kenya's always-on cash network — CDMs and agent POS terminals connected to every major bank and SACCO.
+          </p>
+        </div>
 
+        {/* Link columns — 3 cols on mobile */}
+        <div className="grid grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-10">
           {COLS.map((col) => (
             <div key={col.title}>
               <h5
-                className="font-semibold uppercase mb-4"
-                style={{
-                  fontSize: 12,
-                  letterSpacing: "0.14em",
-                  color: "var(--muted)",
-                }}
+                className="font-semibold uppercase mb-3"
+                style={{ fontSize: 10, letterSpacing: "0.12em", color: "var(--muted)" }}
               >
                 {col.title}
               </h5>
@@ -65,20 +62,20 @@ export const Footer = () => {
                     {l.href.startsWith("/") && !l.href.startsWith("/#") ? (
                       <Link
                         to={l.href}
-                        className="block py-1 transition-colors"
-                        style={{ fontSize: 14.5, color: "rgba(244,246,242,0.75)" }}
+                        className="block py-0.5 transition-colors text-[11px] lg:text-[14px]"
+                        style={{ color: "rgba(244,246,242,0.70)" }}
                         onMouseEnter={e => (e.currentTarget.style.color = "var(--green)")}
-                        onMouseLeave={e => (e.currentTarget.style.color = "rgba(244,246,242,0.75)")}
+                        onMouseLeave={e => (e.currentTarget.style.color = "rgba(244,246,242,0.70)")}
                       >
                         {l.label}
                       </Link>
                     ) : (
                       <a
                         href={l.href}
-                        className="block py-1 transition-colors"
-                        style={{ fontSize: 14.5, color: "rgba(244,246,242,0.75)" }}
+                        className="block py-0.5 transition-colors text-[11px] lg:text-[14px]"
+                        style={{ color: "rgba(244,246,242,0.70)" }}
                         onMouseEnter={e => (e.currentTarget.style.color = "var(--green)")}
-                        onMouseLeave={e => (e.currentTarget.style.color = "rgba(244,246,242,0.75)")}
+                        onMouseLeave={e => (e.currentTarget.style.color = "rgba(244,246,242,0.70)")}
                       >
                         {l.label}
                       </a>
@@ -92,8 +89,8 @@ export const Footer = () => {
 
         {/* Bottom bar */}
         <div
-          className="mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3"
-          style={{ borderTop: "1px solid var(--line)", color: "var(--muted)", fontSize: 13 }}
+          className="mt-6 pt-4 flex flex-col sm:flex-row items-center justify-between gap-2"
+          style={{ borderTop: "1px solid var(--line)", color: "var(--muted)", fontSize: 11 }}
         >
           <p>© 2026 Orbit POS. Built for the Kenyan market.</p>
           <p>Nairobi · Kenya</p>
