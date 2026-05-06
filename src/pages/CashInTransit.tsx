@@ -167,7 +167,7 @@ export default function CashInTransit() {
                 </div>
               </Reveal>
               <Reveal delay={100}>
-                <span className="eyebrow">Always-On Infrastructure</span>
+                <span className="eyebrow">Always -On Infrastructure</span>
                 <h2
                   className="font-extrabold text-white mt-2 mb-2"
                   style={{ fontSize: "clamp(20px,3vw,40px)", lineHeight: 1.05, letterSpacing: "-0.025em" }}
@@ -196,7 +196,7 @@ export default function CashInTransit() {
         <section className="py-8 lg:py-14" style={{ background: "var(--bg-2)" }}>
           <div className="container-orbit">
             <Reveal>
-              <span className="eyebrow">Chain of Custody</span>
+              <span className="eyebrow">Chain of Custodys</span>
               <h2 className="font-extrabold text-white mt-2 mb-2" style={{ fontSize: "clamp(18px,3vw,40px)", lineHeight: 1.05, letterSpacing: "-0.025em" }}>
                 From your floor to your bank account
               </h2>
