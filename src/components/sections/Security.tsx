@@ -5,7 +5,6 @@ const BULLETS = [
   "PesaLink IPSL HMAC-signed transaction proxying",
   "Two-factor authentication (2FA) per transaction",
   "Biometric verification at airport and medical hubs",
-  "Full CBK and AML/KYC regulation compliance",
   "Bank-grade physical encryption on all terminals",
   "CCTV surveillance at all hub locations",
   "99.9% uptime with 24/7 remote monitoring",
@@ -13,7 +12,6 @@ const BULLETS = [
 
 const STATS = [
   { v: "99.98%", l: "Network uptime" },
-  { v: "CBK",    l: "Regulated" },
   { v: "ISO",    l: "20022 rails" },
   { v: "AML",    l: "Compliant" },
 ];
@@ -52,7 +50,6 @@ export const Security = () => {
             }}
           >
             Built on PesaLink Rails.<br />
-            <span style={{ color: "var(--green)" }}>Secured for CBK.</span>
           </h2>
 
           <p style={{ color: "var(--muted)", fontSize: "clamp(13px,1.2vw,17px)", lineHeight: 1.6, maxWidth: "44ch" }}>

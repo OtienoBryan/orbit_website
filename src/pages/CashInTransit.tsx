@@ -167,7 +167,7 @@ export default function CashInTransit() {
                 </div>
               </Reveal>
               <Reveal delay={100}>
-                <span className="eyebrow">Always -On Infrastructure</span>
+                <span className="eyebrow">Always-On Infrastructure</span>
                 <h2
                   className="font-extrabold text-white mt-2 mb-2"
                   style={{ fontSize: "clamp(20px,3vw,40px)", lineHeight: 1.05, letterSpacing: "-0.025em" }}
@@ -175,7 +175,7 @@ export default function CashInTransit() {
                   Cash banking at every location, day or night.
                 </h2>
                 <p style={{ color: "var(--muted)", fontSize: "clamp(12px,1.1vw,15px)", lineHeight: 1.6 }}>
-                  Orbit CDM kiosks operate 24/7 — at petrol stations, malls, transit hubs, dedicated corprate clients and busy streets. Each kiosk is directly on PesaLink rails, clearing instantly to any bank in Kenya.
+                  Orbit CDM kiosks operate 24/7 — at petrol stations, malls, transit hubs, dedicated corporate clients and busy streets. Each kiosk is directly on PesaLink rails, clearing instantly to any bank in Kenya.
                 </p>
                 <ul className="mt-4 grid grid-cols-2 sm:grid-cols-1 gap-2">
                   {["Cash Deposit", "Cash Withdrawal", "Funds Transfer", "Bill Payments", "Airtime Top-up"].map((item) => (
@@ -196,7 +196,7 @@ export default function CashInTransit() {
         <section className="py-8 lg:py-14" style={{ background: "var(--bg-2)" }}>
           <div className="container-orbit">
             <Reveal>
-              <span className="eyebrow">Chain of Custodys</span>
+              <span className="eyebrow">Chain of Custody</span>
               <h2 className="font-extrabold text-white mt-2 mb-2" style={{ fontSize: "clamp(18px,3vw,40px)", lineHeight: 1.05, letterSpacing: "-0.025em" }}>
                 From your floor to your bank account
               </h2>
